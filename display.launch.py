@@ -8,8 +8,8 @@ import xacro
 
 def generate_launch_description():
     # Get the package share directory and URDF file path
-    package_share_dir = get_package_share_directory('test_robot')
-    urdf_file = os.path.join(package_share_dir, 'urdf', 'test_robot.urdf')
+    package_share_dir = get_package_share_directory('test_robot_new')
+    urdf_file = os.path.join(package_share_dir, 'urdf', 'test_robot_new.urdf')
 
     # Check if the URDF file exists
     if not os.path.exists(urdf_file):
