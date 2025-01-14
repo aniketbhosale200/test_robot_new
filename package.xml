@@ -1,10 +1,10 @@
 <package format="2">
-  <name>test_robot</name>
+  <name>test_robot_new</name>
   <version>1.0.0</version>
   <description>
-    URDF Description package for test_robot.
+    URDF Description package for test_robot_new.
     This package contains configuration data, 3D models, and launch files
-    for the test_robot robot.
+    for the test_robot_new robot.
   </description>
   <author>aniket</author> 
   <maintainer email="aniketbhosale200@gmail.com">aniket</maintainer>
