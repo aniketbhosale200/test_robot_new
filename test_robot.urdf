@@ -4,6 +4,9 @@
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="test_robot_new">
+
+  <link name="dummy_link"/>
+
   <link
     name="base_link">
     <inertial>
@@ -44,6 +47,12 @@
       </geometry>
     </collision>
   </link>
+  <joint name="base_joint" type="fixed">
+        <parent link="dummy_link"/>
+        <child link="base_link"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
   <link
     name="FL_link">
     <inertial>
