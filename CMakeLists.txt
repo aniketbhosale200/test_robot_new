@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(test_robot)
+project(test_robot_new)
 
 # Find the necessary ROS 2 packages
 find_package(ament_cmake REQUIRED)
