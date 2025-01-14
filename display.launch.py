@@ -7,35 +7,35 @@ from ament_index_python.packages import get_package_share_directory
 import xacro
 
 def generate_launch_description():
-    # Get the package share directory and URDF file path
+    # Get the package share directory
     package_share_dir = get_package_share_directory('test_robot_new')
+    
+    # Point to the URDF file
     urdf_file = os.path.join(package_share_dir, 'urdf', 'test_robot_new.urdf')
-
+    
     # Check if the URDF file exists
     if not os.path.exists(urdf_file):
         raise FileNotFoundError(f"URDF file not found: {urdf_file}")
-
-    # Parse the URDF file using xacro (if it's a xacro file, otherwise just read the XML file)
-    urdf_doc = xacro.parse(open(urdf_file, 'r'))
-    xacro.process_doc(urdf_doc)
-    robot_description = urdf_doc.toxml()
-
-    # Declare the URDF model argument
+    
+    # Read the URDF file
+    with open(urdf_file, 'r') as file:
+        robot_description = file.read()
+    
+    # Declare the model argument
     declare_model_arg = DeclareLaunchArgument(
         'model',
         default_value=urdf_file,
-        description='Path to the robot model file'
+        description='Path to the robot URDF file'
     )
-
+    
     # Node: Joint State Publisher GUI
     joint_state_publisher_gui_node = Node(
         package='joint_state_publisher_gui',
         executable='joint_state_publisher_gui',
         name='joint_state_publisher_gui',
-        output='screen',
-        parameters=[{'robot_description': robot_description}]
+        output='screen'
     )
-
+    
     # Node: Robot State Publisher
     robot_state_publisher_node = Node(
         package='robot_state_publisher',
@@ -44,20 +44,18 @@ def generate_launch_description():
         output='screen',
         parameters=[{'robot_description': robot_description}]
     )
-
-    # Node: RViz2
+    
+    # Node: RViz2 (without loading any config)
     rviz2_node = Node(
         package='rviz2',
         executable='rviz2',
         name='rviz2',
-        output='screen',
-        parameters=[{'robot_description': robot_description}]
+        output='screen'
     )
-
+    
     return LaunchDescription([
         declare_model_arg,
         joint_state_publisher_gui_node,
         robot_state_publisher_node,
         rviz2_node,
     ])
-
