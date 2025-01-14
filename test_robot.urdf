@@ -3,7 +3,7 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="test_robot">
+  name="test_robot_new">
   <link
     name="base_link">
     <inertial>
@@ -26,7 +26,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://test_robot/meshes/base_link.STL" />
+          filename="package://test_robot_new/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -40,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://test_robot/meshes/base_link.STL" />
+          filename="package://test_robot_new/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -66,7 +66,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://test_robot/meshes/FL_link.STL" />
+          filename="package://test_robot_new/meshes/FL_link.STL" />
       </geometry>
       <material
         name="">
@@ -80,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://test_robot/meshes/FL_link.STL" />
+          filename="package://test_robot_new/meshes/FL_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -121,7 +121,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://test_robot/meshes/BL_link.STL" />
+          filename="package://test_robot_new/meshes/BL_link.STL" />
       </geometry>
       <material
         name="">
@@ -135,7 +135,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://test_robot/meshes/BL_link.STL" />
+          filename="package://test_robot_new/meshes/BL_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -176,7 +176,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://test_robot/meshes/FR_link.STL" />
+          filename="package://test_robot_new/meshes/FR_link.STL" />
       </geometry>
       <material
         name="">
@@ -190,7 +190,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://test_robot/meshes/FR_link.STL" />
+          filename="package://test_robot_new/meshes/FR_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -231,7 +231,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://test_robot/meshes/FB_link.STL" />
+          filename="package://test_robot_new/meshes/FB_link.STL" />
       </geometry>
       <material
         name="">
@@ -245,7 +245,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://test_robot/meshes/FB_link.STL" />
+          filename="package://test_robot_new/meshes/FB_link.STL" />
       </geometry>
     </collision>
   </link>
