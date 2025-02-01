@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="https://www.ros.org/wiki/xacro" name="test_robot_new">
+
+  <xacro:arg name="is_ignition" default="true"/>
+  <xacro:include filename="common_properties_test_robot_new.xacro"/>
+  <xacro:include filename="test_robot_mobile_base.xacro"/>
+  <xacro:include filename="test_robot_new.gazebo.xacro"/>
+  <xacro:include filename="test_robot_new_ros2_control.xacro"/>
+
+</robot>
